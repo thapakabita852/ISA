@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Scissors, Paper Game</title>
+    <style>
+      body {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 20px;
+        padding: 10px 20px;
+        background-color: aquamarine;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #play-again-button {
+        display: none;
+        margin-top: 20px;
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+        padding-left: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="game-status">Choose!</h1>
+    <div class="button-container">
+      <button onclick="startGame()">Start Game</button>
+      <button onclick="endGame(event)" style="display: none;"></button>
+    </div>
+    <div id="result" class="hidden"></div>
+    <button id="play-again-button" onclick="resetGame()" style="display: none;">Play Again?</button>
+    <div id="moves-container" class="hidden">
+      <p class="move-display"><h2></h2></p>
+      <p class="move-display"><h2></h2></p>
+    </div>
+    <script src="script1.js"></script>
+  </body>
+</html>
